@@ -1,19 +1,273 @@
-body {
-    background-color: #f4f9fc;
+:root {
+    --azul-monmifish: #0b5394;
+    --azul-oscuro: #073763;
+    --celeste-claro: #d9f0fb;
+    --naranja-camaron: #f6921e;
+    --naranja-oscuro: #c46a10;
+    --gris-texto: #333333;
 }
 
-header, nav, aside, footer {
-    text-align: center;
+body {
+    background-color: #f4f9fc;
+    font-family: 'Open Sans', sans-serif;
+    color: var(--gris-texto);
+}
+
+h1, h2, h3, .navbar-brand {
+    font-family: 'Poppins', sans-serif;
+}
+
+.header-bg {
+    background: linear-gradient(135deg, var(--azul-monmifish), var(--azul-oscuro));
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
+}
+
+.logo-header {
+    width: 58px;
+    height: 58px;
+    flex-shrink: 0;
+}
+
+.marca .nombre-marca {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #ffffff;
+    line-height: 1.1;
+}
+
+.marca .eslogan-marca {
+    font-size: 0.8rem;
+    color: var(--celeste-claro);
+}
+
+.barra-nav {
+    background-color: var(--naranja-oscuro);
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+}
+
+.navbar .nav-link {
+    font-weight: 600;
+    color: #ffffff;
+    padding: 0.9rem 1.2rem;
+    transition: background-color 0.3s ease;
+}
+
+.navbar .nav-link:hover {
+    background-color: rgba(255, 255, 255, 0.15);
+    color: #ffffff;
+}
+
+.navbar-toggler {
+    border-color: rgba(255, 255, 255, 0.5);
+}
+
+.seccion-inicio {
+    background: linear-gradient(180deg, #ffffff 0%, var(--celeste-claro) 100%);
+    color: var(--gris-texto);
+}
+
+.seccion-inicio h2 {
+    color: var(--azul-monmifish);
+    font-size: 2.5rem;
+}
+
+.texto-justificado {
+    text-align: justify;
+    text-justify: inter-word;
+}
+
+.panel-destacado {
+    background-color: #ffffff;
+    border-radius: 14px;
+    border-left: 5px solid var(--naranja-camaron);
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+}
+
+.dato-destacado {
+    display: flex;
+    flex-direction: column;
+}
+
+.dato-numero {
+    font-family: 'Poppins', sans-serif;
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: var(--azul-monmifish);
+    line-height: 1.1;
+}
+
+.dato-texto {
+    color: var(--gris-texto);
+    font-size: 0.95rem;
+}
+
+.panel-destacado hr {
+    border-color: var(--celeste-claro);
+    margin: 1.2rem 0;
+}
+
+.btn-azul {
+    background-color: var(--azul-monmifish);
+    color: #ffffff;
+    border: none;
+    transition: transform 0.2s ease, background-color 0.3s ease;
+}
+
+.btn-azul:hover {
+    background-color: var(--azul-oscuro);
+    color: #ffffff;
+    transform: translateY(-2px);
+}
+
+.btn-naranja {
+    background-color: var(--naranja-camaron);
+    color: #ffffff;
+    border: none;
+    transition: transform 0.2s ease, background-color 0.3s ease;
+}
+
+.btn-naranja:hover {
+    background-color: var(--naranja-oscuro);
+    color: #ffffff;
+    transform: translateY(-2px);
+}
+
+.texto-naranja {
+    color: var(--naranja-oscuro);
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    font-size: 0.85rem;
+}
+
+.seccion-servicios {
+    background-color: var(--celeste-claro);
+}
+
+.card {
+    border: none;
+    border-top: 4px solid var(--naranja-camaron);
+    border-radius: 12px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15) !important;
+}
+
+.card-title {
+    color: var(--azul-monmifish);
+    font-weight: 600;
+}
+
+.icono-servicio {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+}
+
+.bloque-mvv {
+    background-color: #ffffff;
+    border-radius: 12px;
+    border-bottom: 4px solid var(--naranja-camaron);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease;
+}
+
+.bloque-mvv:hover {
+    transform: translateY(-4px);
+}
+
+.bloque-mvv h5 {
+    color: var(--azul-monmifish);
+    font-weight: 600;
+}
+
+.tarjeta-contacto {
+    background-color: #ffffff;
+    border-radius: 12px;
+    border-left: 4px solid var(--naranja-camaron);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.tarjeta-contacto .icono-servicio.d-inline {
+    font-size: 1.2rem;
+    margin-bottom: 0;
+    margin-right: 0.4rem;
 }
 
 img, iframe {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
     max-width: 100%;
+}
+
+.img-borde-naranja {
+    border: 3px solid var(--naranja-camaron);
 }
 
 .pie-de-foto {
     text-align: center;
-    margin-top: 10px;
+    font-size: 0.9rem;
+    color: #555555;
+}
+
+form .form-control:focus {
+    border-color: var(--naranja-camaron);
+    box-shadow: 0 0 0 0.2rem rgba(246, 146, 30, 0.25);
+}
+
+.aside-bg {
+    background-color: #e9ecef;
+    border-top: 1px solid #dee2e6;
+    border-bottom: 1px solid #dee2e6;
+}
+
+footer {
+    background-color: var(--azul-oscuro);
+    border-top: 4px solid var(--naranja-camaron);
+}
+
+/* Pantallas pequeñas (celulares) */
+@media (max-width: 576px) {
+    .marca .nombre-marca {
+        font-size: 1.2rem;
+    }
+
+    .marca .eslogan-marca {
+        font-size: 0.7rem;
+    }
+
+    .logo-header {
+        width: 46px;
+        height: 46px;
+    }
+
+    .seccion-inicio h2 {
+        font-size: 1.9rem;
+        text-align: center;
+    }
+
+    .seccion-inicio .texto-naranja {
+        text-align: center;
+    }
+
+    .seccion-inicio .texto-justificado {
+        text-align: left;
+    }
+
+    .seccion-inicio .btn {
+        display: block;
+        width: 100%;
+        margin: 0.5rem 0 !important;
+    }
+
+    .card {
+        margin-bottom: 1rem;
+    }
+}
+
+/* Tablets */
+@media (max-width: 768px) {
+    .navbar-nav {
+        margin-top: 0.5rem;
+    }
 }
